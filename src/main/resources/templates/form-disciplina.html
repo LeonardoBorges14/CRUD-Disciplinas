@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="fragments/layout">
+<div th:fragment="conteudo">
+	<div class="container mt-3">
+		<form action="/cadastro" method="post" th:object="${disciplina}">
+			<div class="form-group">
+				<label>Codigo da disciplina:</label> <input type="text"
+					class="form-control" th:field="*{codigo}">
+			</div>
+			<div class="form-group">
+				<label>Nome da disciplina:</label> <input type="text"
+					class="form-control" th:field="*{nome}">
+			</div>
+			<div class="form-group">
+				<label>Periodo:</label><br>
+				<div class="form-check form-check-inline">
+					<input type="radio" value="1" th:field="*{periodo}"
+						class="form-check-input"> <label class="form-check-label"
+						for="periodo1">1</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input type="radio" value="2" th:field="*{periodo}"
+						class="form-check-input"> <label class="form-check-label"
+						for="periodo2">2</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input type="radio" value="3" th:field="*{periodo}"
+						class="form-check-input"> <label class="form-check-label"
+						for="periodo3">3</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input type="radio" value="4" th:field="*{periodo}"
+						class="form-check-input"> <label class="form-check-label"
+						for="periodo4">4</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input type="radio" value="5" th:field="*{periodo}"
+						class="form-check-input"> <label class="form-check-label"
+						for="periodo5">5</label>
+				</div>
+
+
+			</div>
+			<div class="form-group">
+				<label>Nome do professor:</label> <input type="text"
+					class="form-control" th:field="*{professor}">
+			</div>
+			<button type="submit" class="btn btn-primary">Cadastrar</button>
+		</form>
+	</div>
+</div>
+</html>
